@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .card {
+            text-align: center;
+            flex: 0 1 32%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            /* height: 250px; */
+            /* width: 200; */
+            margin: 10px 10px 10px 10px;
+        }
+        .cards {
+            justify-content: space-between;
+            margin: 0 5px 0 5px;
+            height: 200px;
+            width:300px;
+            display: flex;
+            text-align: center;
+        }
+
+        .cards .card img:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        h1, h2, #dropdown, .buttons {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="header">WELCOME TO THE DOM HOTEL</h1>
+<h2 id="slogan">Slogan</h2>
+<div id="dropdown"></div>
+
+<div class="buttons">
+    <button id="book">Book Room</button>
+    <button>Unbook Room</button>
+</div>
+
+
+<div class="flexbox">
+    <section class="cards">
+        <article class="card">
+            <p>Queen</p>
+            <img src="https://i.picsum.photos/id/101/300/200.jpg">
+        </article>
+        <article class="card">
+            <p>King</p>
+            <img src="https://i.picsum.photos/id/1025/300/200.jpg">
+        </article>
+        <article class="card">
+            <p>Twin</p>
+            <img src="https://i.picsum.photos/id/1010/300/200.jpg">
+        </article>
+    </section>
+</div>
+
+    <script src="hotelflex.js"></script>
+</body>
+</html>
