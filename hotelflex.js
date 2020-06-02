@@ -12,8 +12,7 @@ for (let i = 0; i < roomList.length; i++) {
     document.getElementById("dropdown").innerHTML = html;
 
 let bookedRooms = [];
-let bookBtn = document.getElementById("book")
-bookBtn.addEventListener("click", function(){
-    bookedRooms.push(html.value)
-    roomList.splice(roomList.indexOf(html.value))
-})
+
+function myFunction() {
+    console.log("hello world")
+}
