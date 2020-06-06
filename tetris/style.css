@@ -5,13 +5,36 @@ div {
 }
 
 .grid {
-    background-color: blue;
     height: 400px;
     width: 200px;
     display: flex;
     flex-wrap: wrap;
 }
 
+.previous-grid {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.previous-shape {
+    height: 80px;
+    width: 80px;
+}
+
 .block {
     background-color: blue;
+}
+.block2 {
+    background-color: purple;
+}
+.block3 {
+    background-color: navy;
+}
+.block4 {
+    background-color: green;
+}
+.block5 {
+    background-color: pink;
 }

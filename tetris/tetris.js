@@ -3,8 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementsByClassName("grid")
     let squares = Array.from(grid.querySelectorAll("div"))
     const width = 10
+    const displaySquares = document.querySelectorAll(".previous-grid div")
     const height = 20
     let currentPosition = 4;
+
+    function control(e) {
+        if(e.keyCode === 39) {
+            moveRight();
+        } else if (e.keyCode === 38) {
+            rotate();
+        } else if (e.keyCode === 37) {
+            moveLeft();
+        } else if (e.keyCode === 40) {
+            moveDown();
+        }
+    }
+
+    document.addEventListener("keydown", control)
 
 
     const lTetromino = [
@@ -75,8 +90,35 @@ function moveDown () {
 function moveRight() {
     undraw()
     const isAtRightEdge = current.some(index => (currentPosition + index) % width === width -1)
+    if (!isAtRightEdge) currentPosition += 1;
+    if (current. some(index => squares[currentPosition+index].classList.contains("block2"))) {
+        currentPosition -= 1;
+    }
+draw();
 }
 
+function moveLeft() {
+    const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
+    of (!isAtLeftEdge) {
+        currentPosition-=1;
+    }
+    if (current.some(index => squares[currentPosition + index].classList.contains("block2"))) {
+        currentPosition += 1;
+    }
+    draw();
+}
 
+//rotate Tetromino
+
+function rotate() {
+    undraw();
+    currentRotation++;
+    if(currentRotation === current.length) {
+        currentRotation = 0;
+    }
+    current = theTetrominos[currentRotation];
+}
+
+draw();
 
 })
